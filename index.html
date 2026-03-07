@@ -214,6 +214,60 @@
       </main>
     </section>
 
+    <!-- Modal -->
+  <div id="issueModal" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm items-center justify-center px-4">
+    <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
+      <div class="p-6 border-b border-slate-200">
+        <div class="flex justify-between items-start gap-4">
+          <div>
+            <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+            <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500">
+              <span id="modalStatus"></span>
+              <span id="modalAuthor"></span>
+              <span id="modalDate"></span>
+            </div>
+          </div>
+          <button id="closeModalBtnTop" class="text-slate-500 hover:text-slate-800 text-2xl leading-none">&times;</button>
+        </div>
+      </div>
+
+      <div class="p-6 space-y-5">
+        <div>
+          <h4 class="font-semibold mb-2">Description</h4>
+          <p id="modalDescription" class="text-slate-600 leading-7"></p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p class="text-sm text-slate-500 mb-1">Assignee</p>
+            <p id="modalAssignee" class="font-semibold">N/A</p>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p class="text-sm text-slate-500 mb-1">Priority</p>
+            <p id="modalPriority" class="font-semibold">N/A</p>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p class="text-sm text-slate-500 mb-1">Category</p>
+            <p id="modalCategory" class="font-semibold">N/A</p>
+          </div>
+
+          <div class="bg-slate-50 rounded-xl p-4 border border-slate-200">
+            <p class="text-sm text-slate-500 mb-1">Labels</p>
+            <div id="modalLabels" class="flex flex-wrap gap-2 mt-2"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="p-6 border-t border-slate-200 flex justify-end">
+        <button id="closeModalBtn" class="bg-violet-600 hover:bg-violet-700 text-white px-5 py-2 rounded-lg font-medium">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+
     <script src="./js/script.js"></script>
   </body>
 </html>
