@@ -16,7 +16,7 @@ const state = {
   searchText: ""
 };
 
-// Elements
+
 const loginPage = document.getElementById("loginPage");
 const appPage = document.getElementById("appPage");
 const loginForm = document.getElementById("loginForm");
@@ -32,7 +32,7 @@ const tabButtons = document.querySelectorAll(".tab-btn");
 const searchInput = document.getElementById("searchInput");
 const searchBtn = document.getElementById("searchBtn");
 
-// Modal elements
+
 const issueModal = document.getElementById("issueModal");
 const modalTitle = document.getElementById("modalTitle");
 const modalStatus = document.getElementById("modalStatus");
@@ -46,7 +46,7 @@ const modalLabels = document.getElementById("modalLabels");
 const closeModalBtn = document.getElementById("closeModalBtn");
 const closeModalBtnTop = document.getElementById("closeModalBtnTop");
 
-// ---------- Helpers ----------
+
 function showSpinner() {
   loadingSpinner.classList.remove("hidden");
   issuesContainer.classList.add("hidden");
@@ -76,7 +76,7 @@ function getStatus(issue) {
   if (normalized.includes("close")) return "closed";
   if (normalized.includes("open")) return "open";
 
-  // fallback guess
+
   return "open";
 }
 
@@ -147,7 +147,7 @@ function getLabelBadgeClass(label) {
   return "bg-slate-100 text-slate-600 border border-slate-200";
 }
 
-// ---------- Auth ----------
+
 function checkAuth() {
   const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
 
@@ -187,7 +187,6 @@ logoutBtn.addEventListener("click", () => {
   appPage.classList.add("hidden");
 });
 
-// ---------- API ----------
 async function fetchAllIssues() {
   try {
     showSpinner();
@@ -258,7 +257,6 @@ function extractSingleIssue(data) {
   return data;
 }
 
-// ---------- Filters ----------
 function applyFilters() {
   let result = [...state.allIssues];
 
@@ -279,7 +277,6 @@ tabButtons.forEach(button => {
   });
 });
 
-// ---------- Search ----------
 searchBtn.addEventListener("click", handleSearch);
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") handleSearch();
@@ -296,7 +293,6 @@ function handleSearch() {
   }
 }
 
-// ---------- Render ----------
 function renderIssues(issues) {
   issuesContainer.innerHTML = "";
 
@@ -376,7 +372,6 @@ function renderIssues(issues) {
   });
 }
 
-// ---------- Modal ----------
 function openModal(issue) {
   const status = getStatus(issue);
   const labels = getLabels(issue);

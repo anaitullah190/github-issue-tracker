@@ -17,7 +17,7 @@
     />
   </head>
   <body class="bg-slate-100 text-slate-800">
-    <!-- Login Page -->
+
     <section
       id="loginPage"
       class="min-h-screen flex items-center justify-center px-4 py-10 hidden"
@@ -84,9 +84,9 @@
       </div>
     </section>
 
-    <!-- Main Page -->
+
     <section id="appPage" class="min-h-screen">
-      <!-- Navbar -->
+
       <nav class="bg-white shadow-sm border-b border-slate-200">
         <div
           class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4"
@@ -128,12 +128,12 @@
         </div>
       </nav>
 
-      <!-- Content -->
+
       <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <section
           class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 sm:p-6"
         >
-          <!-- Tabs -->
+
           <div class="flex flex-wrap gap-3 mb-6">
             <button
               data-tab="all"
@@ -155,7 +155,7 @@
             </button>
           </div>
 
-          <!-- Summary -->
+
           <div
             class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 mb-8 border border-slate-200 rounded-xl p-4"
           >
@@ -189,7 +189,7 @@
             </div>
           </div>
 
-          <!-- Loading -->
+
           <div id="loadingSpinner" class="hidden py-16">
             <div class="flex flex-col items-center justify-center gap-4">
               <div
@@ -199,13 +199,12 @@
             </div>
           </div>
 
-          <!-- Empty State -->
+
           <div id="emptyState" class="hidden py-16 text-center">
             <h3 class="text-xl font-semibold mb-2">No issues found</h3>
             <p class="text-slate-500">Try a different tab or search keyword.</p>
           </div>
 
-          <!-- Issue Grid -->
           <div
             id="issuesContainer"
             class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5"
@@ -214,7 +213,7 @@
       </main>
     </section>
 
-    <!-- Modal -->
+
   <div id="issueModal" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-sm items-center justify-center px-4">
     <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden">
       <div class="p-6 border-b border-slate-200">
